@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* HeroSection.css */
+.hero-bg {
+    animation: textureMove 20s infinite alternate;
+  }
+  
+  @keyframes textureMove {
+    0% {
+      transform: perspective(500px) rotateX(20deg) translateZ(-50px);
+    }
+    100% {
+      transform: perspective(500px) rotateX(15deg) translateZ(50px);
+    }
+  }
