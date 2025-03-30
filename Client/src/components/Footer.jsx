@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/Logo.svg';
 
 const Footer = () => {
   return (
