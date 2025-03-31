@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.svg"; // Ensure your logo is in the correct path
+import logo from "../assets/Logo.svg"; // Ensure your logo is in the correct path
 
 const Loader = () => {
   return (
