@@ -25,7 +25,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="py-5 bg-white">
+    <section className="py-5  bg-gradient-to-br from-blue-50 to-indigo-100 ">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side - Image */}
         <div 
@@ -39,7 +39,7 @@ const ContactUs = () => {
         {/* Right Side - Form */}
         <div 
           
-          className="md:w-1/2 bg-white p-8 rounded-xl shadow-lg"
+          className="md:w-1/2 bg-gradient-to-br from-blue-100 to-indigo-200 py-5 p-8 rounded-xl shadow-lg"
         >
           <h2 className="text-3xl font-bold text-blue-900 mb-4">Get in Touch</h2>
           <p className="text-gray-600 mb-6">We’d love to hear from you! Fill in the form and we’ll get back to you soon.</p>

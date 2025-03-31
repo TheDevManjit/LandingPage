@@ -11,16 +11,16 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-    {/* Sections with IDs for Smooth Scrolling */}
-    <section id="hero" className="section"><Hero /></section>
+      {/* Sections with IDs for Smooth Scrolling */}
+      <section id="hero" className="section"><Hero /></section>
       <section id="school" className="section"><School /></section>
-    <section id="coaching" className="section"><CoachingServices /></section>
-       <section id="additional" className="section"><AdditionalServices /></section>
+      <section id="coaching" className="section"><CoachingServices /></section>
+      <section id="additional" className="section"><AdditionalServices /></section>
       <CtaSection />
       <section id="testimonials" className="section"><Testimonials /></section>
+      <section id="why-choose" className="section"><WhyChoose /></section>
       <section id="contact" className="section"><ContactUs /></section>
-       <section id="why-choose" className="section"><WhyChoose /></section>
-      
+
 
     </>
   )

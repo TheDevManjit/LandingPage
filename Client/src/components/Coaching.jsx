@@ -31,7 +31,7 @@ const CoachingServices = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-gradient-to-r from-blue-50 to-blue-100 mt-12 px-6 md:px-16 lg:px-24 py-12"
+      className="bg-white mt-12 px-6 md:px-16 lg:px-24 py-12"
     >
       <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-6">
         Coaching Services – Upgrade Your Institute with Digital Power!

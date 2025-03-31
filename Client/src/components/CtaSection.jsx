@@ -4,7 +4,7 @@ import { motion, } from 'framer-motion';
 
 const CtaSection = () => {
     return (
-      <section className="bg-gray-900 text-white text-center py-12 px-6">
+      <section className="bg-gray-900 text-white text-center py-12 px-6 my-8">
         <h2 className="text-2xl md:text-3xl font-bold">Ready to Transform Your Educational Institute?</h2>
         <p className="mt-2 text-gray-300">Schedule a free consultation today and discover how TeachMark can help you grow.</p>
         <motion.a

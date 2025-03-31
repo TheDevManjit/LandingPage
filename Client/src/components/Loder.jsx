@@ -8,10 +8,10 @@ const Loader = () => {
       <p className="text-lg font-semibold text-gray-700 animate-fade-in">
         Welcome to TeachMark
       </p>
-      <div className="relative w-[120px] h-[90px] mt-8">
+      
     
-      <div class="loader"></div>
-      </div>
+      <div className="loader"></div>
+     
     </div>
   );
 };

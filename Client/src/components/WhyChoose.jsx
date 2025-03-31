@@ -7,7 +7,7 @@ import Animation from "../assets/Animation - 1743184412827.json"
 
 const WhyChoose = () => {
   return (
-    <div className='my-10 text-center text-btn bg-gradient-to-br from-blue-50 to-indigo-100 py-5 '>
+    <div className='my-10 text-center text-btn bg-white '>
       <h1 className="text-4xl font-bold text-blue-600 mb-8">Why Choose TeachMark?</h1>
       <div className="  flex flex-col lg:flex-row items-center justify-center p-6 "
       >

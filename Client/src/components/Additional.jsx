@@ -39,7 +39,7 @@ const AdditionalServices = () => {
     ];
 
     return (
-        <div className="relative py-12 px-6 md:px-16 lg:px-24 rounded-2xl border"
+        <div className="relative py-12 px-6 md:px-16 lg:px-24 rounded-2xl border bg-gradient-to-br from-blue-50 to-indigo-100 py-5"
         >
 
             <h2 className="text-2xl md:text-3xl font-bold text-center text-orange-800 mb-8">

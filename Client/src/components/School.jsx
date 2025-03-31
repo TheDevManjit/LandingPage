@@ -64,8 +64,8 @@ const School = () => {
 
   return (
     <>
-      <section 
-        className="relative py-12 md:py-16 bg-white overflow-hidden"
+      <section id='school'
+        className="relative py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-5 overflow-hidden"
         aria-label="School Educational Services"
       >
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
