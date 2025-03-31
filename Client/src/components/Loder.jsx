@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../assets/Logo.svg"; // Ensure your logo is in the correct path
+import Logo from "../assets/Logo.svg"; // Ensure your logo is in the correct path
 
 const Loader = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-white">
-      <img src={logo} alt="Logo" className="w-24 h-24 animate-pulse mb-4" /> 
+      <img src={Logo} alt="Logo" className="w-24 h-24 animate-pulse mb-4" /> 
       <p className="text-lg font-semibold text-gray-700 animate-fade-in">
         Welcome to TeachMark
       </p>
