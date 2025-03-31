@@ -28,21 +28,17 @@ const ContactUs = () => {
     <section className="py-5 bg-white">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side - Image */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+        <div 
+          
           className="md:w-1/2"
         >
            <Lottie animationData={animationData} loop={true} className="w-full h-auto" />
           
-        </motion.div>
+        </div>
 
         {/* Right Side - Form */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+        <div 
+          
           className="md:w-1/2 bg-white p-8 rounded-xl shadow-lg"
         >
           <h2 className="text-3xl font-bold text-blue-900 mb-4">Get in Touch</h2>
@@ -87,7 +83,7 @@ const ContactUs = () => {
               </button>
             </form>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Book, Rocket, Users, MonitorSmartphone, Lightbulb, ImageOff } from 'lucide-react';
-
+import { Book, Rocket, Users, MonitorSmartphone, Lightbulb } from 'lucide-react';
 
 function Hero() {
   return (
@@ -28,7 +27,7 @@ function Hero() {
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
               Smart Class Solutions, Digital Marketing, and Career Growth Strategies designed to empower educational institutions.
             </p>
-            <button  className="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 md:py-4 px-8 md:px-10 rounded-full transition-all transform hover:scale-105">
+            <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 md:py-4 px-8 md:px-10 rounded-full transition-all transform hover:scale-105">
               <a href="#contact">Contact Us</a>
             </button>
           </div>
@@ -47,8 +46,8 @@ function Hero() {
               />
             </div>
 
-            {/* Floating Cards - Hidden on extra small screens, visible on small screens and above */}
-            <div className="hidden sm:block absolute -top-8 -right-4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
+            {/* Floating Cards */}
+            <div className="absolute -top-8 -right-4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl hidden sm:block">
               <div className="flex items-center gap-2 md:gap-3">
                 <MonitorSmartphone className="w-6 h-6 md:w-10 md:h-10 text-blue-500" />
                 <div>
@@ -58,7 +57,7 @@ function Hero() {
               </div>
             </div>
 
-            <div className="hidden sm:block absolute top-1/3 -left-4 md:-left-8 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl animate-pulse">
+            <div className="absolute top-1/3 -left-4 md:-left-8 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl animate-pulse hidden sm:block">
               <div className="flex items-center gap-2 md:gap-3">
                 <Users className="w-6 h-6 md:w-10 md:h-10 text-orange-500" />
                 <div>
@@ -68,7 +67,7 @@ function Hero() {
               </div>
             </div>
 
-            <div className="hidden sm:block absolute bottom-16 md:bottom-20 -right-4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
+            <div className="absolute bottom-16 md:bottom-20 -right-4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl hidden sm:block">
               <div className="flex items-center gap-2 md:gap-3">
                 <Book className="w-6 h-6 md:w-10 md:h-10 text-green-500" />
                 <div>
@@ -78,7 +77,7 @@ function Hero() {
               </div>
             </div>
 
-            <div className="hidden sm:block absolute bottom-0 left-1/4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl animate-bounce">
+            <div className="absolute bottom-0 left-1/4 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl animate-bounce hidden sm:block">
               <div className="flex items-center gap-2 md:gap-3">
                 <Rocket className="w-6 h-6 md:w-10 md:h-10 text-red-500" />
                 <div>

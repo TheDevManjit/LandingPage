@@ -16,7 +16,16 @@ const Popup = () => {
     const timer = setTimeout(() => {
       setShowPopup(true);
     }, 5000);
-    return () => clearTimeout(timer);
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setShowPopup(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const handleClose = () => {
@@ -29,22 +38,18 @@ const Popup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Send email using emailjs
     emailjs
       .send("service_vkxi40f", "template_duv7amj", formData, "FVOwyC9n7bFrNRCIG")
-      .then(
-        () => {
-          setIsSubmitted(true);
-          setTimeout(() => {
-            setShowPopup(false);
-          }, 2000);
-        },
-        (error) => {
-          console.error("Email Error:", error);
-        }
-      );
+      .then(() => {
+        setIsSubmitted(true); // Set isSubmitted to true only after successful email submission
+        setTimeout(() => setShowPopup(false), 2000); // Close popup after 2 seconds
+      })
+      .catch((error) => console.error("Email Error:", error));
   };
 
-  if (!showPopup) return null;
+  if (!showPopup) return null; // Don't render the popup if not shown
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
@@ -52,14 +57,19 @@ const Popup = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
-        className="bg-white p-5 shadow-lg rounded-lg border border-gray-200 w-96 relative"
+        className="bg-white p-5 shadow-lg rounded-lg border border-gray-200 max-w-[90%] sm:w-96 relative"
       >
-        <button onClick={handleClose} className="absolute top-3 right-3 text-gray-500 hover:text-red-500">
+        <button
+          onClick={handleClose}
+          className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
+        >
           <X size={20} />
         </button>
-        <div className="flex justify-between items-center mb-3">
-          <h3 className="text-lg font-semibold text-blue-900">Want to Build Your Brand?</h3>
-        </div>
+
+        <h3 className="text-lg font-semibold text-blue-900 text-center mb-3">
+          Want to Build Your Brand?
+        </h3>
+
         {!isSubmitted ? (
           <form onSubmit={handleSubmit} className="space-y-3">
             <input
@@ -90,13 +100,16 @@ const Popup = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              className={`w-full py-2 rounded-lg transition bg-blue-600 text-white hover:bg-blue-700 `}
+              // disabled={!formData.name || !formData.email || !formData.message}
             >
               Send Enquiry
             </button>
           </form>
         ) : (
-          <p className="text-green-600 text-center font-semibold">Thank you! We'll contact you soon.</p>
+          <p className="text-green-600 text-center font-semibold">
+            Thank you! We'll contact you soon.
+          </p>
         )}
       </motion.div>
     </div>
